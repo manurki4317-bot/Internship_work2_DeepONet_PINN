@@ -15,7 +15,3 @@ https://drive.google.com/drive/folders/1fWLYMaFt2eRL4_8Qx31UlD3oLeZQmr9L?usp=sha
 
 This folder contains the files needed to work with the processed bursts
 and reproduce the corresponding analyses.
-
-If additional files are generated in the future, they may also be added
-to this shared folder so that all resources remain available from a
-single location.
