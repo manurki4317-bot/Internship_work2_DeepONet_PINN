@@ -4,7 +4,7 @@ This is a resgister of all the work that I have done during my internship in BCA
 **Repository structure:**  
 The repository is designed as a log of my progress throughout the internship. Rather than providing introductory explanations of basic concepts, it focuses directly on the specific topics, analyses, and results that I worked on. This makes it a useful reference both for myself and for anyone interested in following the steps of the developed tasks.
 
-- **[User manual](./USER_MANUAL.md)** User manual, it contains basic informatiom about the libraries used, etc.
+- **[User manual](./User_manual.md)** User manual, it contains basic informatiom about the libraries used, etc.
 
 - **[Tasks/proyects done](./task)**: Main notebooks of the projects.
   - **[Context](./task/1_context.md)**: Initial context of the analysis.
