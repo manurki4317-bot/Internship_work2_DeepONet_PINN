@@ -12,11 +12,12 @@ This repository focuses on visualizing and briefly explaining different methods 
 
 ## Tools
 - Coding program: Python 3.13
-- Libraries and packages used during programming
-- `pyabf`: read `.abf` files  
-- `numpy`, `pandas`, `scipy`: math & stats  
-- `matplotlib`, `seaborn`, `plotly`: plots  
-- `umap-learn`, `scikit-learn`: dimensionality reduction  
+- Libraries and packages used during programming:
+  - `numpy`: numerical computations
+  - `scipy`: ODE-related utilities and MATLAB (`.mat`) file handling
+  - `plotly`: interactive visualization of simulated bursts
+  - `torch`: implementation and training of DeepONet and PINNs
+  - `scikit-learn`: train/test dataset splittin
 
-**For deeper an complementary information realetd to the used packages and libraries: 
-  [Resources and references](./2_Libraries_used.md)**
+**For deeper and complementary information related to the libraries and packages used, see:**
+- [Resources and references](./2_Libraries_used.md)
