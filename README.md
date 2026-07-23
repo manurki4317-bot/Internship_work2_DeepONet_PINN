@@ -7,7 +7,7 @@ The repository is designed as a log of my progress throughout the internship. Ra
 - **[User manual](./User_manual.md)** User manual, it contains basic informatiom about the libraries used, etc.
 
 - **[Tasks/proyects done](./task)**: Main notebooks of the projects.
-  - **[Context](./task/1_context.md)**: Initial context of the analysis.
+  - **[Context](./task/context.md)**: Initial context of the analysis.
   - **[Resources and references](./task/2_Libraries_used.md)** Packages and libraries used. There are links to access to the information related to each library used.
   - **[Visibility graph and 2D and 3D embedding](./task/Task1.ipynb)**: Visibility graphs and embeddings.
   - **[UMAP and Histplot](./task/Task2.ipynb)**: Shapelets analysis.
