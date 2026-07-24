@@ -14,7 +14,7 @@ The repository is organized as follows:
 | Folder / File | Description |
 |----------------|--------------|
 | **[Context](./task/Context.md):** | Provides the initial context of the analyses. |
-| **[Resources and references](./task/2_Libraries_used.md):** | Contains information about the packages and libraries used, including links to their documentation. |
+| **[Resources and references](./task/Libraries_used.md):** | Contains information about the packages and libraries used, including links to their documentation. |
 | **[Visibility graph and 2D and 3D embedding](./task/Task1.ipynb):** | Includes notebooks related to visibility graph construction and 2D/3D embeddings. |
 | **[UMAP and Histplot](./task/Task2.ipynb):** | Focused on Shapelet analysis and visualization. |
 | **[Shapelets](./task/Task3.ipynb):** | Presents “clustering” representations of bursts using UMAP and histograms. |
