@@ -8,10 +8,10 @@ The repository is designed as a log of my progress throughout the internship. Ra
 
 - **[Tasks/proyects done](./task)**: Main notebooks of the projects.
   - **[Context](./task/Context.md)**: Initial context of the analysis.
-  - **[Resources and references](./task/2_Libraries_used.md)** Packages and libraries used. There are links to access to the information related to each library used.
+  - **[Resources and references](./task/Libraries_used.md)** Packages and libraries used. There are links to access to the information related to each library used.
 
     
 - **[Python related content](.python)**: Codes, csv's, and abf's used for the tasks.
   - **[bursts .abf's](./task/bursting)**: abf files with the data to be studied.
-  - **[tasks codes](./python/task)**: Python codes done for each task.
+  - **[tasks codes](./task/python)**: Python codes done for each task.
 
