@@ -1,74 +1,62 @@
-# Resources and references
+# Resources and References
 
-I’ve put together some resources and references using Python. These are the main libraries that supported my analyses, computations, and visualizations in the tasks/projects done during the internship.
+The following Python libraries were used throughout the internship for electrophysiological signal processing, dataset preparation, visualization, and machine learning.
 
-    
-    
-**Core numerical and scientific computing:**
+## Core numerical and scientific computing
 
-[NumPy](https://www.w3schools.com/python/numpy/numpy_intro.asp): Fundamental library for numerical computing, arrays, and linear algebra.
+- **[NumPy](https://numpy.org/)**
+  - Numerical computing, array manipulation, and mathematical operations.
 
-[SciPy](https://www.w3schools.com/python/scipy/scipy_intro.php): Scientific computing, including signal processing (find_peaks, hilbert) and interpolation (interp1d).
+- **[SciPy](https://scipy.org/)**
+  - Scientific computing, including digital signal processing and peak detection.
 
-[os](https://docs.python.org/3.10/library/os.html): Provides a way of interacting with the operating system.
+- **[os](https://docs.python.org/3/library/os.html)**
+  - Operating system utilities for file and directory management.
 
-[math](https://docs.python.org/3/library/math.html): Provides basic mathematical functions and constants such as square root, trigonometric functions, and π.
+- **[pathlib](https://docs.python.org/3/library/pathlib.html)**
+  - Object-oriented file and path handling.
 
-**Data handling and manipulation:**
+## Data handling
 
-[pandas](https://pypi.org/project/pandas/): Data structures and analysis tools (DataFrame, Series).
+- **[pandas](https://pandas.pydata.org/)**
+  - Data structures and CSV manipulation.
 
-[tslearn](https://pypi.org/project/tslearn/): Time-series machine learning, including preprocessing (TimeSeriesScalerMinMax) and shapelets learning (LearningShapelets).
+## Electrophysiology
 
-**Statistics and metrics:**
+- **[pyABF](https://swharden.com/pyabf/)**
+  - Reading and processing Axon Binary Files (ABF).
 
-[scipy.stats](https://docs.scipy.org/doc/scipy/tutorial/stats.html): Provides statistical functions such as skew and kurtosis.
+- **[scipy.signal](https://docs.scipy.org/doc/scipy/reference/signal.html)**
+  - Signal filtering and spike detection using functions such as `find_peaks` and Butterworth filters.
 
-[numpy.linalg](https://numpy.org/doc/2.1/reference/routines.linalg.html): Linear algebra operations, e.g. least squares (lstsq).
+## Machine learning and deep learning
 
-[scikit-learn](https://pypi.org/project/scikit-learn/) (sklearn): Tools for machine learning and model evaluation:
+- **[PyTorch](https://pytorch.org/)**
+  - Deep learning framework used to implement PINNs, DeepONet, FNO, and WNO architectures.
 
-  TruncatedSVD for dimensionality reduction.
+- **[scikit-learn](https://scikit-learn.org/)**
+  - Data preprocessing, train/test splitting, normalization, feature selection, and model evaluation.
 
-  StandardScaler for feature scaling.
+## Data visualization
 
-  r2_score for model evaluation.
+- **[Matplotlib](https://matplotlib.org/)**
+  - Scientific plotting and visualization of electrophysiological recordings and datasets.
 
-  metrics for additional evaluation metrics for regression and classification performance.
-  
-**Signal processing and electrophysiology**
+## Jupyter utilities
 
-[pyABF](https://swharden.com/pyabf/): Specialized library to read and analyze Axon Binary Files (ABF) from electrophysiology experiments.
-[scipy.signal](https://www.askpython.com/python-modules/scipy-signal): Tools for signal processing, including filtering, Fourier transforms, and feature extraction.
+- **[%matplotlib widget](https://matplotlib.org/stable/users/explain/figure/interactive.html)**
+  - Enables interactive figures within Jupyter notebooks.
 
-**Machine learning and dimensionality reduction**
+## Additional utilities
 
-[UMAP](https://umap-learn.readthedocs.io/en/latest/): Dimensionality reduction and visualization technique.
+- **[joblib](https://joblib.readthedocs.io/)**
+  - Saving and loading preprocessing objects such as scalers.
 
-[TensorFlow/Keras](https://pypi.org/project/tf-keras/): Deep learning framework (used here with the Adam optimizer).
+- **[PyYAML](https://pyyaml.org/)**
+  - Reading configuration files in YAML format.
 
-[sklearn.cluster](https://scikit-learn.org/stable/api/sklearn.cluster.html): Algorithms for unsupervised clustering (e.g., K-Means, DBSCAN).
+- **[tqdm](https://tqdm.github.io/)**
+  - Progress bars for preprocessing and model training.
 
-[sklearn.ensemble](https://scikit-learn.org/stable/api/sklearn.ensemble.html): Ensemble learning methods such as Random Forests and Gradient Boosting.
-
-[sklearn.neighbors](https://scikit-learn.org/stable/modules/neighbors.html): Nearest-neighbor algorithms for classification, regression, and density estimation.
-
-**Graphs and network analysis**
-
-[networkx](https://networkx.org/documentation/stable/tutorial.html): Creation, analysis, and visualization of complex networks/graphs.
-
-**Plotting and visualization**
-
-[matplotlib](https://pypi.org/project/matplotlib/): Standard Python plotting library.
-
-[matplotlib.cm](https://matplotlib.org/stable/api/cm_api.html): Colormap handling for visualizations.
-
-[seaborn](https://pypi.org/project/seaborn/): High-level statistical data visualization built on matplotlib.
-
-[plotly.express](https://plotly.com/python/plotly-express/): Interactive plotting library.
-
-[plotly.io](https://plotly.com/python-api-reference/generated/plotly.io.html): Lower-level interface for rendering plotly figures.
-
-**Jupyter utilities**
-
-[%matplotlib widget](https://matplotlib.org/stable/api/widgets_api.html): Enables interactive plots within Jupyter notebooks.
+- **[scipy.io](https://docs.scipy.org/doc/scipy/reference/io.html)**
+  - Reading and writing MATLAB (`.mat`) files.
