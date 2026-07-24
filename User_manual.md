@@ -16,9 +16,9 @@ The repository includes preprocessing scripts, generated datasets, visualization
 |---------------|-------------|
 | **[Context](./task/Context.md)** | General overview and objectives of the internship project. |
 | **[Resources and References](./task/Libraries_used.md)** | Python libraries and external documentation used throughout the project. |
-| **`python/`** | Python scripts and Jupyter notebooks for preprocessing, visualization, and model training. |
-| **`bursting/`** | Raw electrophysiological recordings in ABF format. |
-| **`processed_bursts/`** | Extracted bursts and processed datasets used for training and testing. |
+| **[python](./codes)** | Python scripts and Jupyter notebooks for preprocessing, visualization, and model training. |
+| **[bursting](./bursting)** | Raw electrophysiological recordings in ABF format. |
+| **[processed_bursts](./task/processed_bursts)** | Extracted bursts and processed datasets used for training and testing. |
 
 ---
 
@@ -80,7 +80,7 @@ The repository generates:
 
 - Interactive plots require `%matplotlib widget`.
 - Raw ABF recordings are not modified during preprocessing.
-- All generated datasets are stored inside the `processed_bursts` directory.
+- All generated datasets are stored inside the [processed_bursts](./task/processed_bursts) directory.
 
 ---
 
