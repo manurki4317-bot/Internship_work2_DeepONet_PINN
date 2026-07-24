@@ -2,98 +2,104 @@
 
 ## Overview
 
-This repository serves as a record of all the work completed during an internship at **BCAM (Basque Center for Applied Mathematics)**.  
-It documents the progress, methodologies, and results developed across multiple analytical and computational tasks.
+This repository contains the work completed during an internship at **BCAM (Basque Center for Applied Mathematics)**.
 
-Rather than covering introductory explanations or theoretical background, the focus lies on **specific analyses, visualizations, and applications** performed during the internship.
+The project focuses on preprocessing electrophysiological recordings stored in **ABF (Axon Binary File)** format, extracting neuronal bursting events, and preparing datasets for machine learning and neural operator models such as **Physics-Informed Neural Networks (PINNs)**, **DeepONet**, **Fourier Neural Operators (FNO)**, and **Wavelet Neural Operators (WNO)**.
+
+The repository includes preprocessing scripts, generated datasets, visualizations, and the neural network architectures used throughout the project.
+
+---
 
 ## Repository Structure
 
-The repository is organized as follows:
-
 | Folder / File | Description |
-|----------------|--------------|
-| **[Context](./task/Context.md):** | Provides the initial context of the analyses. |
-| **[Resources and references](./task/Libraries_used.md):** | Contains information about the packages and libraries used, including links to their documentation. |
-| **[Visibility graph and 2D and 3D embedding](./task/Task1.ipynb):** | Includes notebooks related to visibility graph construction and 2D/3D embeddings. |
-| **[UMAP and Histplot](./task/Task2.ipynb):** | Focused on Shapelet analysis and visualization. |
-| **[Shapelets](./task/Task3.ipynb):** | Presents “clustering” representations of bursts using UMAP and histograms. |
-| **[Better UMAP identification](./task/Task4.ipynb):** | Refined clustering and UMAP analysis for conflictive burst areas *(in progress)*. |
-| **[Applications for bursts identification and evaluation](./task/Task5.ipynb):** | Tools to compare anomalous bursts with their surroundings, allowing both quantitative and visual analysis. |
-| **[Burst clustering](./task/Task6.ipynb)** | Analysis of the features that affect the most to the burst classification, clustering in the most optimal way and find data patterns or interesting data for better bursts identification and/or clustering *(in progress, last thing was not possible to be done)*.
-| **[Python related content](.python)** | Python scripts, CSV files, and `.abf` datasets used across tasks. |
-| **[Images of each of the projects/tasks](./Images_outputs)** | Visual outputs of each project or task (stored in 4 folders — one per project). |
+|---------------|-------------|
+| **[Context](./task/Context.md)** | General overview and objectives of the internship project. |
+| **[Resources and References](./task/Libraries_used.md)** | Python libraries and external documentation used throughout the project. |
+| **`python/`** | Python scripts and Jupyter notebooks for preprocessing, visualization, and model training. |
+| **`bursting/`** | Raw electrophysiological recordings in ABF format. |
+| **`processed_bursts/`** | Extracted bursts and processed datasets used for training and testing. |
 
-Subfolders for images:
-  - **[Task1 images](./Images_outputs/Task1)** 
-  - **[Task2 images](./Images_outputs/Task2)**
-  - **[Task3 images](./Images_outputs/Task3)**
-  - **[Task4 images](./Images_outputs/Task4)**
-  - **[Task5 images](./Images_outputs/Task5)**
-  - **[Task6 images](./Images_outputs/Task6)**
-
+---
 
 ## Requirements
 
-To explore or reproduce the work, ensure the following environment:
+The project was developed using:
 
-- **Language:** Python 3.8+ in theory. In my case I used python 3.13.
-- **Core Libraries:** The ones that are most used
-  - `numpy`
-  - `pandas`
-  - `matplotlib`
-  - `seaborn`
-  - `scipy`
-  - `umap-learn`
-  - `networkx`
-  - `neo` (for `.abf` file handling)
-  - `pyabf` (if used for electrophysiological data)
+- **Python 3.13**
+- Jupyter Notebook
 
-Install libraries:
-# For almost each library this method will work, but this method can vary depending on the user.
+### Main libraries
+
+- `numpy`
+- `scipy`
+- `pandas`
+- `matplotlib`
+- `pyabf`
+- `torch`
+- `scikit-learn`
+- `joblib`
+- `pyyaml`
+- `tqdm`
+
+Most libraries can be installed using:
+
 ```bash
-pip install numpy scipy math
+pip install numpy scipy pandas matplotlib pyabf torch scikit-learn joblib pyyaml tqdm
 ```
 
-## Project Topics Overview
+---
 
-| Topic | Description |
-|--------|--------------|
-| **Visibility Graph Analysis** | Conversion of time series into complex networks and visualization in 2D/3D. |
-| **UMAP and Histplot** | Dimensionality reduction and visualization of burst patterns. |
-| **Shapelets & Clustering** | Identification and grouping of similar burst structures. |
-| **Enhanced UMAP Analysis** | Improved methods for detecting and visualizing conflictive burst zones. |
-| **Applications for Burst Evaluation** | Tools for comparing anomalous vs. normal bursts visually and quantitatively. |
-| **Burst analysis and clustering** | Obtention of more trustful data and both obtain the relevance of features in a model and cluster the burst. |
+## Project Workflow
 
+The repository follows the workflow below:
+
+1. Load electrophysiological recordings from `.abf` files.
+2. Apply optional signal filtering.
+3. Detect action potentials (spikes).
+4. Identify bursting events using inter-spike interval (ISI) criteria.
+5. Extract and normalize individual bursts.
+6. Build training and testing datasets.
+7. Train and evaluate PINNs, DeepONet, FNO, and WNO models.
+
+---
 
 ## Outputs
 
-Each task or project includes:
-- Generated **plots and figures** (stored in `TaskX_images/`)
-- **Processed CSV files** with analysis results
-- **Python scripts** implementing specific methods
-- **ABF files** representing electrophysiological data inputs
+The repository generates:
 
+- Processed burst datasets
+- CSV files containing extracted information
+- Scientific plots and figures
+- Training and testing datasets
+- Saved preprocessing objects (when required)
+
+---
 
 ## Notes
 
-- Not all image outputs are visible within the `.ipynb` preview on GitHub; the dedicated image folders ensure full access.
-- Some parts of the analysis (e.g., "Better UMAP identification" or "Clustering bursts") are **ongoing work**.
+- Interactive plots require `%matplotlib widget`.
+- Raw ABF recordings are not modified during preprocessing.
+- All generated datasets are stored inside the `processed_bursts` directory.
 
+---
 
 ## Author
 
-**Manurki4317**  
-Internship at **BCAM (Basque Center for Applied Mathematics)**  
-GitHub: [manurki4317-bot](https://github.com/manurki4317-bot)
+**Manurki4317**
 
+Internship at **BCAM (Basque Center for Applied Mathematics)**
+
+GitHub: https://github.com/manurki4317-bot
+
+---
 
 ## License
 
-This repository is intended for academic and research purposes.  
-If you use or refer to this work, please provide appropriate citation or acknowledgment.
+This repository is intended for academic and research purposes.
 
+If you use or reference this work, please provide appropriate acknowledgment.
 
+---
 
-**This specific markdown was partially done with AI as a support tool.**
+*This documentation was prepared with the assistance of AI tools and subsequently reviewed and adapted by the author.*
