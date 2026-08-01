@@ -15,5 +15,5 @@ The repository is designed as a log of my progress throughout the internship. Ra
   - **[Burst recordings](./task/bursting)**: Experimental `.abf` files containing neuronal activity (future implementation).
   - **[Task codes](./codes)**: Python scripts developed for the different tasks carried out during the project.
   - **[Data simulation](./codes/Data_simulation.ipynb)**: Scripts for generating simulated neuronal burst datasets from the four-dimensional ODE model.
-  - **[Google Colab notebooks](./codes/Execute_in_Colab.ipynb)**: Ready-to-run notebooks for dataset generation, visualization and model training in Google Colab.
+  - **[Google Colab notebooks](./codes/Execute_in_Colab.ipynb)**: Ready-to-run code for dataset visualization and model training in Google Colab.
 
