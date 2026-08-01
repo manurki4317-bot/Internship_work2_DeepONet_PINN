@@ -58,7 +58,7 @@ The repository follows the workflow below:
 4. Split the dataset into training and testing subsets.
 5. Train and evaluate a DeepONet model.
 6. Prepare the physics module for future PINN implementation.
-7. Extend the framework to experimental ABF recordings and additional neural operators (FNO and WNO).
+7. (Future work) Extend the framework to experimental ABF recordings and additional neural operators (FNO and WNO).
 
 ---
 
