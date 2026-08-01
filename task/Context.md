@@ -29,4 +29,4 @@ This repository focuses on modelling, learning and classifying neuronal bursting
 
 For additional information about the libraries and packages used throughout the project, see:
 
-- [Resources and References](./task/Libraries_used.md)
+- **[Resources and References](./task/Libraries_used.md)**
