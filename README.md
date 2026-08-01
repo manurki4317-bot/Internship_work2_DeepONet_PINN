@@ -13,5 +13,5 @@ The repository is designed as a log of my progress throughout the internship. Ra
     
 - **[Python related content](./codes)**: Codes, csv's, and abf's used for the tasks.
   - **[bursts .abf's](./task/bursting)**: abf files with the data to be studied.
-  - **[tasks codes](./task/python)**: Python codes done for each task.
+  - **[tasks codes](./codes)**: Python codes done for each task.
 
