@@ -11,7 +11,9 @@ The repository is designed as a log of my progress throughout the internship. Ra
   - **[Resources and references](./task/Libraries_used.md)** Packages and libraries used. There are links to access to the information related to each library used.
 
     
-- **[Python related content](./codes)**: Codes, csv's, and abf's used for the tasks.
-  - **[bursts .abf's](./task/bursting)**: abf files with the data to be studied.
-  - **[tasks codes](./codes)**: Python codes done for each task.
+- **[Python related content](./codes)**: Codes, datasets and resources used throughout the project.
+  - **[Burst recordings](./task/bursting)**: Experimental `.abf` files containing neuronal activity (future implementation).
+  - **[Task codes](./codes)**: Python scripts developed for the different tasks carried out during the project.
+  - **[Data simulation](./codes/Data_simulation.ipynb)**: Scripts for generating simulated neuronal burst datasets from the four-dimensional ODE model.
+  - **[Google Colab notebooks](./codes/Execute_in_Colab.ipynb)**: Ready-to-run notebooks for dataset generation, visualization and model training in Google Colab.
 
