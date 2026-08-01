@@ -1,0 +1,88 @@
+# Dataset configuration
+# Type of neural operator architecture
+arc: "DON"
+
+# Paths to the training and testing datasets
+dataset_train: "dataset/train_bursts.mat"
+dataset_test: "dataset/test_bursts.mat"
+
+# Number of samples processed in each training iteration
+batch_size: 64
+
+# Training configuration
+# Total number of training epochs
+epochs: 300
+
+# Learning rate used by the optimizer
+lr: 0.001
+
+# Loss function used to measure the prediction error 
+# L2 corresponds to the mean squared error between predicted and reference solutions
+Loss: "L2" # or "MSE"
+
+# Learning rate scheduler used to reduce the learning rate when the training improvement slows down
+scheduler: "reduceonplateau"
+
+# Optimization algorithm used to update model weights
+optimizer: "Adam"
+
+# Data scaling method applied before training 
+# Gaussian scaling normalizes the input/output data using mean and standard deviation
+scaling: "Gaussian"
+
+# Whether adaptive activation functions are enabled
+adapt_actfun: False
+
+# Number of Fourier features used
+# Set to zero because no Fourier feature mapping is used
+N_FourierF: 0
+
+
+# DeepONet architecture
+# Dimension of the branch network input
+# It corresponds to the number of physical parameters: gK0, Iapp, tau_n and eps
+u_dim: 4
+
+# Dimension of the trunk network input
+# It corresponds to the temporal coordinate
+x_dim: 1
+
+# Number of neurons in the shared latent representation
+# between branch and trunk networks
+G_dim: 128
+
+
+# Hidden layers of the branch network
+# The branch network processes the input parameters
+inner_layer_b:
+  - 256
+  - 256
+
+
+# Hidden layers of the trunk network
+# The trunk network processes the spatial/temporal input
+inner_layer_t:
+  - 128
+  - 128
+
+
+# Activation functions used in both subnetworks
+activation_b: "Tanh"
+activation_t: "Tanh"
+
+
+# Architecture type of branch and trunk networks
+# FNN_LN corresponds to fully connected networks with layer normalization
+arc_b: "FNN_LN"
+arc_t: "FNN_LN"
+
+
+# Weight initialization method
+# Glorot initialization helps maintain stable gradients during training
+initial_b: "Glorot normal"
+initial_t: "Glorot normal"
+
+
+# Output and logging
+# Frequency (in epochs) for displaying training progress
+show_every: 10
