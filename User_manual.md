@@ -1,12 +1,12 @@
-# User Manual – Internship Work Repository
+# User Manual – Burst Classification with Neural Operators and PINNs
 
 ## Overview
 
-This repository contains the work completed during an internship at **BCAM (Basque Center for Applied Mathematics)**.
+This repository contains the implementation developed during an internship at **BCAM (Basque Center for Applied Mathematics)**.
 
-The project focuses on preprocessing electrophysiological recordings stored in **ABF (Axon Binary File)** format, extracting neuronal bursting events, and preparing datasets for machine learning and neural operator models such as **Physics-Informed Neural Networks (PINNs)**, **DeepONet**, **Fourier Neural Operators (FNO)**, and **Wavelet Neural Operators (WNO)**.
+The project focuses on modelling and learning neuronal bursting dynamics using neural operators and physics-informed neural networks. The current implementation is based on bursts generated from a four-dimensional conductance-based ordinary differential equation (ODE) model. The repository has been designed to facilitate future integration of experimental electrophysiological recordings (.abf files).
 
-The repository includes preprocessing scripts, generated datasets, visualizations, and the neural network architectures used throughout the project.
+The repository includes scripts for dataset generation, preprocessing, visualization, model training, and evaluation.
 
 ---
 
@@ -14,11 +14,21 @@ The repository includes preprocessing scripts, generated datasets, visualization
 
 | Folder / File | Description |
 |---------------|-------------|
-| **[Context](./task/Context.md)** | General overview and objectives of the internship project. |
-| **[Resources and References](./task/Libraries_used.md)** | Python libraries and external documentation used throughout the project. |
-| **[python](./codes)** | Python scripts and Jupyter notebooks for preprocessing, visualization, and model training. |
-| **[bursting](./task/bursting)** | Raw electrophysiological recordings in ABF format. |
-| **[processed_bursts](./task/processed_bursts)** | Extracted bursts and processed datasets used for training and testing. |
+| **default_params.yml** | Configuration file containing training and model hyperparameters. |
+| **deepONet_HH_pytorch.py** | Main script used for training DeepONet models. |
+| **dataset/** | Generated datasets used for training and testing. |
+| **src/** | Source code for neural network architectures, training, dataset handling and physics modules. |
+| **README.md** | General description of the project. |
+
+Inside `src/`:
+
+| File | Description |
+|------|-------------|
+| **architectures.py** | Neural network architectures, activation functions, optimizers and loss functions. |
+| **don.py** | DeepONet implementation. |
+| **training.py** | Training and validation loops. |
+| **utility_dataset.py** | Dataset loading, preprocessing and normalization utilities. |
+| **physics.py** | Differential equations describing the neuronal model (under development for PINNs). |
 
 ---
 
@@ -27,40 +37,43 @@ The repository includes preprocessing scripts, generated datasets, visualization
 The project was developed using:
 
 - **Python 3.13**
-- Jupyter Notebook
+- Jupyter Notebook (recommended for experiments)
 
 ### Main libraries
 
 - `numpy`
 - `scipy`
-- `pandas`
-- `matplotlib`
-- `pyabf`
 - `torch`
+- `matplotlib`
+- `plotly`
 - `scikit-learn`
-- `joblib`
 - `pyyaml`
-- `tqdm`
 
 Most libraries can be installed using:
 
 ```bash
-pip install numpy scipy pandas matplotlib pyabf torch scikit-learn joblib pyyaml tqdm
+pip install numpy scipy torch matplotlib plotly scikit-learn pyyaml
 ```
 
 ---
 
 ## Project Workflow
 
-The repository follows the workflow below:
+The current workflow is:
 
-1. Load electrophysiological recordings from `.abf` files.
-2. Apply optional signal filtering.
-3. Detect action potentials (spikes).
-4. Identify bursting events using inter-spike interval (ISI) criteria.
-5. Extract and normalize individual bursts.
-6. Build training and testing datasets.
-7. Train and evaluate PINNs, DeepONet, FNO, and WNO models.
+1. Generate neuronal bursts by solving a four-dimensional ODE model.
+2. Build datasets by varying the model parameters.
+3. Normalize and preprocess the generated data.
+4. Split the dataset into training and testing subsets.
+5. Train a DeepONet model to learn the mapping between model parameters and neuronal dynamics.
+6. Evaluate the model using Relative L2 Error and Mean Squared Error (MSE).
+7. Prepare the physics module for future PINN implementation.
+
+Future developments include:
+
+- Integration of experimental ABF recordings.
+- Complete implementation of Physics-Informed Neural Networks.
+- Comparison with Fourier Neural Operators (FNO) and Wavelet Neural Operators (WNO).
 
 ---
 
@@ -68,19 +81,20 @@ The repository follows the workflow below:
 
 The repository generates:
 
-- Processed burst datasets
-- CSV files containing extracted information
-- Scientific plots and figures
+- Simulated neuronal burst datasets (`.mat`)
 - Training and testing datasets
-- Saved preprocessing objects (when required)
+- Trained DeepONet models
+- Training logs
+- Interactive visualizations of neuronal activity
+- Performance metrics (Relative L2 Error and MSE)
 
 ---
 
 ## Notes
 
-- Interactive plots require `%matplotlib widget`.
-- Raw ABF recordings are not modified during preprocessing.
-- All generated datasets are stored inside the [processed_bursts](./task/processed_bursts) directory.
+- The current implementation uses simulated neuronal activity generated from the ODE model.
+- The `physics.py` module has been introduced as the basis for the future PINN implementation.
+- Experimental ABF recordings are planned for future versions of the project.
 
 ---
 
