@@ -23,6 +23,19 @@ The repository contains documentation, Python scripts, Jupyter notebooks, simula
 | **[Data simulation](./codes/Data_simulation.ipynb)** | Notebook used to generate simulated neuronal bursts from the ODE model. |
 | **[Execute in Google Colab](./codes/Execute_in_Colab.ipynb)** | Ready-to-run notebook for dataset visualization and DeepONet training in Google Colab. |
 | **[Burst recordings](./task/bursting)** | Experimental ABF recordings reserved for future developments. |
+| **[Comparison notebooks](./task/comparison)** | Documentation describing the modifications introduced with respect to the original DeepONet framework. |
+
+### Comparison notebooks
+
+The repository also includes a set of notebooks documenting the evolution of the original framework into the current implementation. Each notebook compares the original code with the modified version and explains the motivation behind the changes.
+
+| Notebook | Description |
+|----------|-------------|
+| **[Parameters](./task/comparison/Parameters.ipynb)** | Comparison between the original and modified configuration files (`default_params.yml`), including the new training and architecture settings. |
+| **[DeepONet](./task/comparison/DON.ipynb)** | Comparison between the original training script and the adapted DeepONet implementation used for simulated neuronal bursts. |
+| **[Utility](./task/comparison/Utility.ipynb)** | Comparison of the dataset loading and preprocessing pipeline, including the new Gaussian normalization and burst dataset format. |
+| **[Architectures](./task/comparison/Architectures.ipynb)** | Description of the architectural modifications introduced to adapt the original neural networks to this project. |
+| **[Init](./task/comparison/Init.ipynb)** | Comparison between the original and modified `__init__.py`, documenting the new exported modules and project organization. |
 
 ---
 
