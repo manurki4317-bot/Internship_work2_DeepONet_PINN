@@ -7,13 +7,16 @@ The repository is designed as a log of my progress throughout the internship. Ra
 - **[User manual](./User_manual.md)** User manual, it contains basic informatiom about the libraries used, etc.
   
 - **[Tasks/projects done](./task)**: Main documentation and notebooks describing the work carried out during the internship.
+
   - **[Context](./task/Context.md)**: Initial context, objectives and motivation of the project.
   - **[Resources and References](./task/Libraries_used.md)**: Python packages, libraries and external references used throughout the project.
-  - **[Parameters](./task/Parameters.ipynb)**: Comparison between the original and the modified configuration file (`default_params.yml`), explaining the changes introduced for neuronal burst classification.
-  - **[DeepONet](./task/DON.ipynb)**: Comparison between the original and the adapted DeepONet implementation, highlighting the modifications required for the new dataset and training pipeline.
-  - **[Utility](./task/Utility.ipynb)**: Comparison between the original and modified dataset preprocessing and loading utilities, including the new normalization and burst dataset handling.
-  - **[Architectures](./task/Architectures.ipynb)**: Comparison between the original neural network architectures and their adapted versions, describing the modifications introduced for this project.
-  - **[Init](./task/Init.ipynb)**: Comparison between the original and modified `__init__.py` file, showing how the project modules were reorganized and extended.
+
+  - **Comparisons between the original and the adapted implementation**
+    - **[Parameters](./task/comparison/Parameters.ipynb)**: Compares the original and modified `default_params.yml` configuration, explaining the changes introduced for neuronal burst classification.
+    - **[DeepONet](./task/comparison/DON.ipynb)**: Compares the original DeepONet implementation with the adapted version used in this project, highlighting the modifications to the training pipeline and dataset handling.
+    - **[Utility](./task/comparison/Utility.ipynb)**: Compares the original and modified dataset loading and preprocessing utilities, including the new normalization procedures and burst dataset management.
+    - **[Architectures](./task/comparison/Architectures.ipynb)**: Compares the original neural network architectures with the adapted versions, describing the architectural changes introduced for burst modelling.
+    - **[Init](./task/comparison/Init.ipynb)**: Compares the original and modified `__init__.py` file, showing how the project modules were reorganized and extended.
 
     
 - **[Python related content](./codes)**: Codes, datasets and resources used throughout the project.
